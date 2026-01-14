@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 door Problem</title>
+</head>
+
+<body>
+    <h1>100 door Problem</h1>
+    <p>Sjekk consollen for svar</p>
+</body>
+<script>
+    var doors = [];
+    for (var i = 0; i < 100; i++)
+        doors[i] = false;
+    for (var i = 1; i <= 100; i++)
+        for (var i2 = i - 1; i2 < 100; i2 += i)
+            doors[i2] = !doors[i2];
+    for (var i = 1; i <= 100; i++)
+        console.log("Door %d is %s", i, doors[i - 1] ? "open" : "closed")
+</script>
+
+</html>
